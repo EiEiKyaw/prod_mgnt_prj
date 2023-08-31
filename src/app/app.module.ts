@@ -7,6 +7,7 @@ import { ProductComponent } from './product/product.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { FormsModule } from '@angular/forms';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FormsModule } from '@angular/forms';
     ProductComponent,
     WarningAlertComponent,
     SuccessAlertComponent,
+    UserComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

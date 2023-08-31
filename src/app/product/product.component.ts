@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProductComponent implements OnInit {
   allowNewProduct = false;
   productCreationStatus = 'No new product creates.';
+  productName = 'Hello World';
 
   constructor() {
     setTimeout(() => {
@@ -21,5 +22,9 @@ export class ProductComponent implements OnInit {
 
   onCreateProduct() {
     this.productCreationStatus = 'New product was created.';
+  }
+
+  onUpdateProduct(event: Event) {
+    this.productName = (<HTMLInputElement>event.target).value;
   }
 }

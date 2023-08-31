@@ -1,3 +1,6 @@
+<input type="text" (input)="onUpdateProduct($event)" />
+<input type="text" class="form-control" [(ngModel)]="productName" />
+<p>{{ productName }}</p>
 <button
   class="btn btn-primary"
   [disabled]="!allowNewProduct"

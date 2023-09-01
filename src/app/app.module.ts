@@ -9,6 +9,7 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { FormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
 import { CommonModule } from '@angular/common';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CommonModule } from '@angular/common';
     WarningAlertComponent,
     SuccessAlertComponent,
     UserComponent,
+    AccountComponent,
   ],
   imports: [BrowserModule, FormsModule, CommonModule],
   providers: [],

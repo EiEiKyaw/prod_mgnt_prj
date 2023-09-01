@@ -1,20 +1,29 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-6 col-2"><label>Username</label></div>
-    <div class="col-xs-6 col-8">
+    <div class="col-xs-6 col-10">
       <input type="text" class="form-control" [(ngModel)]="username" />
     </div>
   </div>
   <div class="row">
-    <p>{{ username }}</p>
+    <p *ngIf="createUserStatus">{{ username }}</p>
   </div>
   <div class="row">
-    <button
-      class="btn btn-primary"
-      [disabled]="username === ''"
-      (click)="username = ''"
-    >
-      Reset User
-    </button>
+    <div class="col-xs-6 col-6">
+      <button
+        class="btn btn-warning mr-3"
+        [disabled]="username === ''"
+        (click)="username = ''"
+      >
+        Reset User
+      </button>
+      <button
+        class="btn btn-primary"
+        [disabled]="username === ''"
+        (click)="onCreateUser()"
+      >
+        Add User
+      </button>
+    </div>
   </div>
 </div>

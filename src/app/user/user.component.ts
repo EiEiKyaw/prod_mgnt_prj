@@ -7,8 +7,13 @@ import { Component } from '@angular/core';
 })
 export class UserComponent {
   username = '';
+  createUserStatus = false;
 
   onResetUser() {
     this.username = '';
+  }
+
+  onCreateUser() {
+    this.createUserStatus = true;
   }
 }

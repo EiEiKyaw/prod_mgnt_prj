@@ -1,6 +1,9 @@
 <div class="container">
   <div class="row">
-    <p [ngStyle]="{ color: getColor() }">
+    <p
+      [ngStyle]="{ color: getColor() }"
+      [ngClass]="{ online: accountStatus === 'online' }"
+    >
       Account Status : {{ accountStatus }}
     </p>
   </div>

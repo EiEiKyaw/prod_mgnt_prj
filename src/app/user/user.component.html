@@ -6,7 +6,12 @@
     </div>
   </div>
   <div class="row">
-    <p *ngIf="createUserStatus">{{ username }}</p>
+    <p *ngIf="createUserStatus; else noCreateUser">
+      {{ username }}
+    </p>
+    <ng-template #noCreateUser>
+      <p>No user created.</p>
+    </ng-template>
   </div>
   <div class="row">
     <div class="col-xs-6 col-6">

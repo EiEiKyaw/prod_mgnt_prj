@@ -13,10 +13,16 @@
       <p>No user created.</p>
     </ng-template>
   </div>
+  <div class="row" *ngFor="let user of userList">
+    <tr>
+      <td>{{ user }}</td>
+    </tr>
+  </div>
   <div class="row">
     <div class="col-xs-6 col-6">
       <button
-        class="btn btn-warning mr-3"
+        class="btn btn-warning"
+        id="reset-btn"
         [disabled]="username === ''"
         (click)="username = ''"
       >

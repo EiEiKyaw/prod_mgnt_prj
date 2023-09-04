@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class UserComponent {
   username = '';
   createUserStatus = false;
+  userList = ['akee', 'awwkyie', 'eikyaw'];
 
   onResetUser() {
     this.username = '';
@@ -15,5 +16,6 @@ export class UserComponent {
 
   onCreateUser() {
     this.createUserStatus = true;
+    this.userList.push(this.username);
   }
 }

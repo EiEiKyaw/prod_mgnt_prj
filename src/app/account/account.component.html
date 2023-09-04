@@ -1,10 +1,28 @@
 <div class="container mt-3">
   <div class="row">
-    <p
-      [ngStyle]="{ color: getColor() }"
-      [ngClass]="{ online: accountStatus === 'online' }"
-    >
-      Account Status : {{ accountStatus }}
-    </p>
+    <div class="col-4">
+      <p
+        [ngStyle]="{ color: getColor() }"
+        [ngClass]="{ online: accountStatus === 'online' }"
+      >
+        Account Status : {{ accountStatus }}
+      </p>
+    </div>
+    <div class="col-4">
+      <button
+        id="on-off-btn"
+        class="btn btn-primary"
+        (click)="onToggleBtn()"
+        [ngStyle]="{ background: getBtnColor() }"
+      >
+        <label *ngIf="!btnStatus">On</label>
+        <label *ngIf="btnStatus">Off</label>
+      </button>
+    </div>
+    <div class="col-4">
+      <tr *ngFor="let count of countClick">
+        <td>{{ count }}</td>
+      </tr>
+    </div>
   </div>
 </div>

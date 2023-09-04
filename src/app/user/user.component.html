@@ -1,22 +1,26 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-6 col-2"><label>Username</label></div>
-    <div class="col-xs-6 col-10">
-      <input type="text" class="form-control" [(ngModel)]="username" />
+    <div class="col-xs-12 col-6">
+      <div class="row">
+        <div class="col-12"><label>Username</label></div>
+        <div class="col-12">
+          <input type="text" class="form-control" [(ngModel)]="username" />
+        </div>
+        <div class="col-12">
+          <p *ngIf="createUserStatus; else noCreateUser">
+            {{ username }}
+          </p>
+          <ng-template #noCreateUser>
+            <p>No user created.</p>
+          </ng-template>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <p *ngIf="createUserStatus; else noCreateUser">
-      {{ username }}
-    </p>
-    <ng-template #noCreateUser>
-      <p>No user created.</p>
-    </ng-template>
-  </div>
-  <div class="row" *ngFor="let user of userList">
-    <tr>
-      <td>{{ user }}</td>
-    </tr>
+    <div class="col-xs-12 col-6">
+      <tr *ngFor="let user of userList">
+        <td>{{ user }}</td>
+      </tr>
+    </div>
   </div>
   <div class="row">
     <div class="col-xs-6 col-6">

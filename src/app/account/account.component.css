@@ -5,3 +5,7 @@
 #on-off-btn {
   width: 100%;
 }
+
+.on {
+  box-shadow: 5px 5px 5px 1px rgba(56, 70, 56, 0.2);
+}

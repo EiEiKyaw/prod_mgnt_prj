@@ -23,7 +23,8 @@ export class AccountComponent {
 
   onToggleBtn() {
     this.btnStatus = !this.btnStatus;
-    this.countClick.push(this.countClick.length + 1);
+    // this.countClick.push(this.countClick.length + 1);
+    this.countClick.push(new Date().getMilliseconds());
   }
 
   getBtnColor() {

@@ -21,8 +21,10 @@
       </button>
     </div>
     <div class="col-4">
-      <tr *ngFor="let count of countClick">
-        <td>{{ count }}</td>
+      <tr *ngFor="let count of countClick; let i = index">
+        <td [ngStyle]="{ background: i % 2 == 0 ? 'gray' : 'white' }">
+          {{ count }}
+        </td>
       </tr>
     </div>
   </div>

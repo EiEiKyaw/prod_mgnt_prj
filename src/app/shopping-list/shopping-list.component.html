@@ -1,1 +1,18 @@
-<p>shopping-list works!</p>
+<div class="row">
+  <div class="col-xs-10">
+    <app-shopping-edit></app-shopping-edit>
+
+    <ul class="list-group mt-3">
+      <a
+        href="#"
+        class="list-group-item clearfix"
+        *ngFor="let item of ingredients"
+      >
+        {{ item.name }}
+        <span class="badge rounded-pill bg-info text-dark">{{
+          item.amount
+        }}</span>
+      </a>
+    </ul>
+  </div>
+</div>

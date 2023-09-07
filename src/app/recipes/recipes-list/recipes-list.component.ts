@@ -19,7 +19,5 @@ export class RecipesListComponent implements OnInit {
       'https://assets.epicurious.com/photos/63ea6ba855007bc33c26ba0b/4:3/w_4862,h_3647,c_limit/Shakshuka_RECIPE_020923_47096.jpg'
     ),
   ];
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {}
 }

@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card mt-3">
   <div class="card-header">
     {{ element.name }}
   </div>
@@ -7,9 +7,9 @@
       <strong *ngIf="element.type === 'server'" style="color: red">
         {{ element.content }}
       </strong>
-      <em *ngIf="element.type === 'blueprint'">
+      <strong *ngIf="element.type === 'blueprint'">
         {{ element.content }}
-      </em>
+      </strong>
     </p>
   </div>
 </div>

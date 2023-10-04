@@ -33,7 +33,7 @@ export class CockpitComponent implements OnInit {
   onAddServer(nameInput: HTMLInputElement) {
     console.log(nameInput.value);
     this.serverCreated.emit({
-      serverName: nameInput.value,
+      serverName: this.serverNameInput.nativeElement.value,
       serverContent: this.serverContentInput.nativeElement.value,
     });
   }

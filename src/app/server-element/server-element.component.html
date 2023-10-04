@@ -3,13 +3,6 @@
     {{ element.name }}
   </div>
   <div class="card-body">
-    <p>
-      <strong *ngIf="element.type === 'server'" style="color: red">
-        {{ element.content }}
-      </strong>
-      <strong *ngIf="element.type === 'blueprint'">
-        {{ element.content }}
-      </strong>
-    </p>
+    <ng-content></ng-content>
   </div>
 </div>
